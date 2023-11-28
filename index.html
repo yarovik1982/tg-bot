@@ -3,6 +3,7 @@
 <head>
    <meta charset='UTF-8'>
    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
    <link rel='stylesheet' href='./css/index.css'>
    <script src='./js/index.js' defer></script>
    <title>Document</title>
@@ -12,7 +13,18 @@
       <header class='header'>
          <div class='container header-container'></div>
       </header>
-      <main class='main'></main>
+      <main class='main'>
+         <div class="container">
+            <div class="row d-flex justify-content-center align-items-center" style="height: 100vh;">
+               <div class="form p-5 bg-secondary rounded-5 w-50" style="min-width: 300px;">
+                  <div class="mb-3">
+                     <input type="text" class="form-control">
+                  </div>
+                  <button class="btn btn-warning btn-sm">send</button>   
+               </div>
+            </div>
+         </div>
+      </main>
       <footer class='footer'></footer>
    </div>
 </body>
