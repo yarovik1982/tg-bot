@@ -9,4 +9,4 @@ const sendMessageInGroup = () => {
    xhttp.send()
 }
 
-document.querySelector('btn').addEventListener('click', sendMessageInGroup)
+document.querySelector('.btn').addEventListener('click', sendMessageInGroup)
